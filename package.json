@@ -1,0 +1,14 @@
+{
+  "name": "fruit_graph_api",
+  "version": "1.0.0",
+  "description": "API truy van MongoDB Atlas cho do thi trai cay",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongodb": "^7.7.0"
+  }
+}
