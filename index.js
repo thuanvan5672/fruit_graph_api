@@ -60,5 +60,17 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log("API running on port " + port);
 });
+// Route test cho trang gốc
+app.get("/", (req, res) => {
+  res.send("Fruit Graph API is running. Try /api/nodes");
+});
+
+// Chạy server Render cung cấp PORT qua biến môi trường
+const PORT = process.env.PORT || 10000;
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 
 
