@@ -7,8 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // ====== KẾT NỐI MONGODB ATLAS ======
-const uri =
-  "mongodb+srv://thuanvan557_db_user:thuan1234@cluster0.iorpy3q.mongodb.net/fruit_graph?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGO_URI;
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -17,7 +16,6 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   },
 });
-
 // ====== ROUTES API ======
 
 // Lấy tất cả nodes (đầy đủ trái cây, thuộc tính, giai đoạn...)
@@ -62,4 +60,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log("API running on port " + port);
 });
+
 
